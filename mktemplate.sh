@@ -36,7 +36,7 @@ echo -e "\t\$(CC) -o ${PROG}_test ${PROG}_test.o ${PROG}.o \$(CFLAGST)\n" \
                                                >> ${ROOT_DIR}/Makefile
 echo -e ".PHONY: test"                         >> ${ROOT_DIR}/Makefile
 echo -e "test: ${PROG}_test"                   >> ${ROOT_DIR}/Makefile
-echo -e "\t./${PROG}_test"                     >> ${ROOT_DIR}/Makefile
+echo -e "\t./${PROG}_test\n"                   >> ${ROOT_DIR}/Makefile
 echo -e ".PHONY: clean"                        >> ${ROOT_DIR}/Makefile
 echo -e "clean:"                               >> ${ROOT_DIR}/Makefile
 echo -e "\trm -f ./*.o"                        >> ${ROOT_DIR}/Makefile
