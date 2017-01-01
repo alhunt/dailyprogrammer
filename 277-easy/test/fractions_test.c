@@ -1,6 +1,10 @@
 #include "minunit.h"
 #include "fractions.h"
 
+MU_TEST(test_gcd) {
+	mu_assert(gcd(4, 8) == 4, "failed to get GCD for 4 and 8");
+}
+
 MU_TEST(test_simplify) {
 	int a[2] = {4, 8};
 	simplify(a);
@@ -39,6 +43,7 @@ MU_TEST(test_simplify) {
 }
 
 MU_TEST_SUITE(test_suite) {
+	MU_RUN_TEST(test_gcd);
 	MU_RUN_TEST(test_simplify);
 }
 
