@@ -27,12 +27,12 @@ echo "Creating Makefile.."
 echo -e "vpath %.c src test\n"                  > ${ROOT_DIR}/Makefile
 echo -e "CC=gcc"                               >> ${ROOT_DIR}/Makefile
 echo -e "CFLAGS=-I./src"                       >> ${ROOT_DIR}/Makefile
-echo -e "CFLAGST=-I./test\n"                   >> ${ROOT_DIR}/Makefile
+echo -e "CFLAGST=-I./test -I./src\n"           >> ${ROOT_DIR}/Makefile
 echo -e "${PROG}: main.o ${PROG}.o"            >> ${ROOT_DIR}/Makefile
 echo -e "\t\$(CC) -o ${PROG} main.o ${PROG}.o \$(CFLAGS)\n" \
                                                >> ${ROOT_DIR}/Makefile
 echo -e "${PROG}_test: ${PROG} ${PROG}_test.o" >> ${ROOT_DIR}/Makefile
-echo -e "\t\$(CC) -o ${PROG}_test ${PROG}_test.o \$(CFLAGST) \$(CFLAGS)\n" \
+echo -e "\t\$(CC) -o ${PROG}_test ${PROG}_test.o ${PROG}.o \$(CFLAGST)\n" \
                                                >> ${ROOT_DIR}/Makefile
 echo -e ".PHONY: test"                         >> ${ROOT_DIR}/Makefile
 echo -e "test: ${PROG}_test"                   >> ${ROOT_DIR}/Makefile
