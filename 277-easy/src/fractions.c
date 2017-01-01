@@ -1,6 +1,7 @@
 // TODO: Remove example code
 #include "fractions.h"
 
-int foo(void) {
-	return 0;
+void simplify(int fraction[2]) {
+	fraction[0] = 1;
+	fraction[1] = 2;
 }

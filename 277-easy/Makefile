@@ -8,7 +8,7 @@ fractions: main.o fractions.o
 	$(CC) -o fractions main.o fractions.o $(CFLAGS)
 
 fractions_test: fractions fractions_test.o
-	$(CC) -o fractions_test fractions_test.o $(CFLAGST) $(CFLAGS)
+	$(CC) -o fractions_test fractions_test.o fractions.o $(CFLAGST) $(CFLAGS)
 
 .PHONY: test
 test: fractions_test

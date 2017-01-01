@@ -1,2 +1,2 @@
-// TODO: Remove example code
-int foo(void);
+// Simplify the passed fraction
+void simplify(int fraction[2]);
