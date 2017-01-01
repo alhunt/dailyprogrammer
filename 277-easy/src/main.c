@@ -9,6 +9,6 @@ int main(int argc, char* argv[]) {
 
 	simplify(f);
 	printf("%d %d\n", f[0], f[1]);
-	
+
 	return 0;
 }
