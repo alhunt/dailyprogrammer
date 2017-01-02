@@ -53,5 +53,16 @@ char *fopening(int day) {
 }
 
 char *fday(int day) {
-	return NULL;
+	if (day > 0 && day <= 12) {
+		char *retbuf = malloc(sizeof(GIFTS[day]));
+
+		if (retbuf == NULL)
+			return NULL;
+
+		sprintf(retbuf, "%s", GIFTS[day]);
+
+		return retbuf;
+	}
+	else
+		return NULL;
 }
