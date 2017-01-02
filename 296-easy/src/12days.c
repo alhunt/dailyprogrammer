@@ -1,6 +1,11 @@
 // TODO: Remove example code
 #include "12days.h"
+#include <stdlib.h>
 
-int foo(void) {
-	return 0;
+char *fopening(int day) {
+	return NULL;
+}
+
+char* fday(int day) {
+	return NULL;
 }

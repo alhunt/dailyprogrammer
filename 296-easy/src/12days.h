@@ -1,2 +1,5 @@
-// TODO: Remove example code
-int foo(void);
+// Format opening lines
+char* fopening(int day);
+
+// Format line for supplied day number
+char* fday(int day);
