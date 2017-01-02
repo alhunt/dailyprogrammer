@@ -41,6 +41,14 @@ echo -e ".PHONY: clean"                        >> ${ROOT_DIR}/Makefile
 echo -e "clean:"                               >> ${ROOT_DIR}/Makefile
 echo -e "\trm -f ./*.o"                        >> ${ROOT_DIR}/Makefile
 
+# Create .gitignore
+echo "Creating .gitignore.."
+echo -e "# Ignore object files"   > ${ROOT_DIR}/.gitignore
+echo -e "/*.o\n"                 >> ${ROOT_DIR}/.gitignore
+echo -e "# Ignore binaries"      >> ${ROOT_DIR}/.gitignore
+echo -e "/${PROG}"               >> ${ROOT_DIR}/.gitignore
+echo -e "/${PROG}_test"          >> ${ROOT_DIR}/.gitignore
+
 # Create main.c
 echo "Creating main.c.."
 echo -e "#include <stdio.h>"                  > ./${ROOT_DIR}/src/main.c
