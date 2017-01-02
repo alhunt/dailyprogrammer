@@ -1,18 +1,27 @@
 #include "minunit.h"
 #include "12days.h"
+#include <string.h>
+#include <stdlib.h>
 
 MU_TEST(test_opening) {
-	mu_assert(fopening(1) == "On the first day of Christmas\n"
-			         "my true love sent to me:",
-		  "Incorrect first day opening");
+	char *open = fopening(1);
 
-	mu_assert(fopening(6) == "On the sixth day of Christmas\n"
-			         "my true love sent to me:",
-		  "Incorrect sixth day opening");
+	int cmp = strcmp(open, "On the first day of Christmas\n"
+			       "my true love sent to me:");
+	mu_assert(!cmp, "Incorrect first day opening");
+	free(open);
 
-	mu_assert(fopening(12) == "On the twelfth day of Christmas\n"
-			          "my true love sent to me:",
-		  "Incorrect twelfth day opening");
+	open = fopening(6);
+	cmp = strcmp(open, "On the sixth day of Christmas\n"
+			   "my true love sent to me:");
+	mu_assert(!cmp, "Incorrect sixth day opening");
+	free(open);
+
+	open = fopening(12);
+	cmp = strcmp(open, "On the twelfth day of Christmas\n"
+			   "my true love sent to me:");
+	mu_assert(!cmp, "Incorrect twelfth day opening");
+	free(open);
 }
 
 MU_TEST(test_days) {
