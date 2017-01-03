@@ -24,7 +24,7 @@ MU_TEST(test_seeking) {
 }
 
 MU_TEST(test_remove_duplicates) {
-	char dupes[] = "((a))";
+	char dupes[50] = "((a))";
 	int dupes_len = strlen(dupes);
 	rem_dupes(dupes, dupes_len);
 	int cmp = strcmp(dupes, "(a)"); 

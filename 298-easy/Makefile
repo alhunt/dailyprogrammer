@@ -1,8 +1,8 @@
 vpath %.c src test
 
 CC=gcc
-CFLAGS=-I./src
-CFLAGST=-I./test -I./src
+CFLAGS=-I./src -g
+CFLAGST=-I./test -I./src -g
 
 parentheses: main.o parentheses.o
 	$(CC) -o parentheses main.o parentheses.o $(CFLAGS)

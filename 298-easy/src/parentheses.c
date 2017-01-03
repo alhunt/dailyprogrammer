@@ -1,5 +1,7 @@
 #include "parentheses.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 void rem_dupes(char *str, int str_len) {
 	int array_max = (str_len / 2) + 1;
@@ -23,7 +25,24 @@ void rem_dupes(char *str, int str_len) {
 	}
 
 	// Set duplicates to spaces
+	for (i = 0; i < x; i++) {
+		int this_o = plist[0][i];
+		int next_o = plist[0][i+1];
+		int this_c = plist[1][i];
+		int next_c = plist[1][i+1];
+
+		if (this_o == next_o + 1 && this_c == next_c - 1) {
+			str[this_o] = ' ';
+			str[this_c] = ' ';
+		}
+	}
+
 	// Remove spaces from string
+	int chr;
+	for (chr = 0; chr < strlen(str) && str[chr] != '\0'; chr++) {
+		if (str[chr] == ' ')
+			memmove(&str[chr], &str[chr + 1], strlen(str) - chr);
+	}
 }
 
 int seek_fwd(char *str, int str_len, int start) {
