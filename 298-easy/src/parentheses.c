@@ -1,6 +1,6 @@
-// TODO: Remove example code
 #include "parentheses.h"
+#include <stdlib.h>
 
-int foo(void) {
-	return 0;
+void rem_dupes(char *str, int str_len) {
+
 }
