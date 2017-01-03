@@ -1,0 +1,6 @@
+# Ignore object files
+/*.o
+
+# Ignore binaries
+/parentheses
+/parentheses_test
