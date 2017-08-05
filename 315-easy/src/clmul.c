@@ -1,6 +1,5 @@
-// TODO: Remove example code
 #include "clmul.h"
 
-int foo(void) {
+int clmul(int x, int y) {
 	return 0;
 }

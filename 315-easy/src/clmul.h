@@ -1,2 +1,2 @@
-// TODO: Remove example code
-int foo(void);
+// Carryless Multiply (XOR-Multiply)
+int clmul(int x, int y);
